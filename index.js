@@ -1,8 +1,8 @@
 // Configuración de URLs específicas para cada API
 const API_URLS = {
-    user: 'https://csrent-x0ip.onrender.com/users',
-    space: 'https://csrent-x0ip.onrender.com/space',
-    reservation: 'https://csrent-x0ip.onrender.com/reservation'
+    user: 'https://csrent-1-uu9g.onrender.com/users',
+    space: 'https://csrent-1-uu9g.onrender.com/space',
+    reservation: 'https://csrent-1-uu9g.onrender.com/reservation'
 };
 
 // Configuración de headers por defecto
