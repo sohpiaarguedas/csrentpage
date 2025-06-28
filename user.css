@@ -1,0 +1,354 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffeef2, #ffd6e3);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(194, 24, 91, 0.1);
+}
+
+h2 {
+    color: #c2185b;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Secciones */
+.form-section,
+.search-section,
+.users-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(194, 24, 91, 0.1);
+    border: 1px solid rgba(194, 24, 91, 0.1);
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #c2185b;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f8bbd9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #c2185b;
+    box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#submit-btn {
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+    color: white;
+}
+
+#submit-btn:hover {
+    background: linear-gradient(135deg, #c2185b, #ad1457);
+}
+
+#cancel-btn {
+    background: #f8bbd9;
+    color: #c2185b;
+}
+
+#cancel-btn:hover {
+    background: #f48fb1;
+}
+
+/* Búsqueda */
+.search-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 250px;
+}
+
+#search-btn {
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+    color: white;
+}
+
+#search-btn:hover {
+    background: linear-gradient(135deg, #c2185b, #ad1457);
+}
+
+#show-all-btn {
+    background: #f8bbd9;
+    color: #c2185b;
+}
+
+#show-all-btn:hover {
+    background: #f48fb1;
+}
+
+/* Tarjetas de usuario */
+.user-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #f8bbd9;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.1);
+}
+
+.user-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(194, 24, 91, 0.15);
+    border-color: #c2185b;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.user-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #c2185b;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field-value {
+    background: #ffeef2;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #f8bbd9;
+    font-size: 1rem;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    color: white;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, #f57c00, #ef6c00);
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(135deg, #d32f2f, #c62828);
+}
+
+/* Estados */
+#loading {
+    text-align: center;
+    color: #c2185b;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+#error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffcdd2;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    background: #e8f5e8;
+    color: #2e7d32;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #c8e6c9;
+    margin-bottom: 20px;
+}
+
+.no-users {
+    text-align: center;
+    color: #c2185b;
+    font-size: 1.1rem;
+    padding: 40px;
+    background: #ffeef2;
+    border-radius: 8px;
+    border: 2px dashed #f8bbd9;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #c2185b;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #d32f2f, #c62828);
+}
+
+.btn-secondary {
+    background: #f8bbd9;
+    color: #c2185b;
+}
+
+.btn-secondary:hover {
+    background: #f48fb1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .search-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #search-input {
+        min-width: unset;
+    }
+    
+    .user-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-actions {
+        justify-content: center;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

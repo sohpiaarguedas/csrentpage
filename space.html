@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Espacios</title>
+    <link rel="stylesheet" href="space.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Espacios</h1>
+        </header>
+
+        <main>
+            <!-- Formulario para crear/editar espacios -->
+            <section class="form-section">
+                <h2 id="form-title">Agregar Nuevo Espacio</h2>
+                <form id="space-form">
+                    <input type="hidden" id="space-id">
+                    
+                    <div class="form-group">
+                        <label for="space-name">Nombre:</label>
+                        <input type="text" id="space-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="space-type">Tipo:</label>
+                        <input type="text" id="space-type" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="space-capacity">Capacidad:</label>
+                        <input type="number" id="space-capacity" min="1" required>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" id="submit-btn">Agregar Espacio</button>
+                        <button type="button" id="cancel-btn" style="display: none;">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Lista de espacios -->
+            <section class="spaces-section">
+                <h2>Lista de Espacios</h2>
+                <div class="spaces-controls">
+                    <div class="search-container">
+                        <input type="number" id="search-id" placeholder="Buscar por ID..." min="1">
+                        <button id="search-btn">Buscar</button>
+                        <button id="clear-search-btn">Mostrar Todos</button>
+                    </div>
+                    <button id="refresh-btn">Actualizar Lista</button>
+                </div>
+                <div id="spaces-container">
+                    <!-- Los espacios se cargarán aquí dinámicamente -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h3>Confirmar Eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar este espacio?</p>
+            <div class="modal-buttons">
+                <button id="confirm-delete">Eliminar</button>
+                <button id="cancel-delete">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="space.js"></script>
+</body>
+</html>
